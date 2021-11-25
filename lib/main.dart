@@ -6,8 +6,8 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge,
       overlays: [SystemUiOverlay.top]);
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-      overlays: [SystemUiOverlay.top]);
+  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+  //     overlays: [SystemUiOverlay.top]);
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.transparent,
       statusBarColor: Colors.transparent,
