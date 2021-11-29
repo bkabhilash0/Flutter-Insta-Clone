@@ -19,7 +19,7 @@ class PostItem extends StatefulWidget {
 class _PostItemState extends State<PostItem> {
   var availablePosts = posts;
 
-  updateLikes(index) {
+  updateLikes(int index) {
     setState(() {
       availablePosts[index]['isLoved'] = !availablePosts[index]['isLoved'];
     });
@@ -66,12 +66,18 @@ class _PostItemState extends State<PostItem> {
           const SizedBox(
             height: 12,
           ),
-          Container(
-            height: 400,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(availablePosts[widget.index]['postImg']),
-                    fit: BoxFit.cover)),
+          GestureDetector(
+            onDoubleTap: () {
+              updateLikes(widget.index);
+            },
+            child: Container(
+              height: 400,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image:
+                          NetworkImage(availablePosts[widget.index]['postImg']),
+                      fit: BoxFit.cover)),
+            ),
           ),
           const SizedBox(height: 12),
           Padding(
@@ -164,7 +170,8 @@ class _PostItemState extends State<PostItem> {
                               shape: BoxShape.circle,
                               image: DecorationImage(
                                   image: NetworkImage(
-                                      availablePosts[widget.index]['profileImg']),
+                                      availablePosts[widget.index]
+                                          ['profileImg']),
                                   fit: BoxFit.cover))),
                       const SizedBox(width: 10),
                       Text("Add a Comment",
