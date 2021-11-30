@@ -2,7 +2,7 @@
 
 Instagram Clone.
 
-## Getting Started Insta Clone
+## Getting Started Insta Clone Dev 
 
 This project is a starting point for a Flutter application.
 
