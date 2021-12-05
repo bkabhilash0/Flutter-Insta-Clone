@@ -2,7 +2,7 @@
 
 Instagram Clone.
 
-## Getting Started Insta Clone
+## Getting Started Insta Clone Dev mode
 
 This project is a starting point for a Flutter application.
 
