@@ -6,10 +6,12 @@ import 'package:line_icons/line_icons.dart';
 
 class PostItem extends StatefulWidget {
   final int index;
+  final String? imageUrl;
 
   const PostItem({
     Key? key,
     required this.index,
+    this.imageUrl,
   }) : super(key: key);
 
   @override
@@ -74,8 +76,10 @@ class _PostItemState extends State<PostItem> {
               height: 400,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image:
-                          NetworkImage(availablePosts[widget.index]['postImg']),
+                      image: widget.imageUrl != null
+                          ? NetworkImage(widget.imageUrl!)
+                          : NetworkImage(
+                              availablePosts[widget.index]['postImg']),
                       fit: BoxFit.cover)),
             ),
           ),
