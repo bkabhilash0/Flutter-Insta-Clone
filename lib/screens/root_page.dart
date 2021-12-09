@@ -66,54 +66,7 @@ class _RootAppState extends State<RootApp> {
 
   PreferredSizeWidget? getAppBar() {
     if (pageIndex == 0) {
-      return AppBar(
-        backgroundColor: black,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text(
-              "Instagram",
-              style: TextStyle(fontFamily: "Billabong", fontSize: 35),
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  "assets/images/upload_icon.svg",
-                  width: 25,
-                ),
-                const SizedBox(
-                  width: 15,
-                ),
-                Stack(
-                  children: [
-                    SvgPicture.asset(
-                      "assets/images/message_icon.svg",
-                      width: 25,
-                    ),
-                    // Positioned(
-                    //     right: 0,
-                    //     top: -10,
-                    //     child: Container(
-                    //       padding: const EdgeInsets.all(2),
-                    //       width: 18,
-                    //       height: 18,
-                    //       decoration: const BoxDecoration(
-                    //           color: Colors.red, shape: BoxShape.circle),
-                    //       child: const Center(
-                    //         child: Text("7",
-                    //             textAlign: TextAlign.center,
-                    //             style: TextStyle(fontSize: 13)),
-                    //       ),
-                    //     ))
-                  ],
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
+      return null;
     } else if (pageIndex == 1) {
       return null;
     } else if (pageIndex == 2) {
